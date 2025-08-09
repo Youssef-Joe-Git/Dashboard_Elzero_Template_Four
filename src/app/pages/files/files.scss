@@ -1,0 +1,136 @@
+.files {
+  background-color: aliceblue;
+  padding: 20px;
+  .content {
+    display: flex;
+
+    gap: 20px;
+    align-items: flex-start;
+    .items {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      .item {
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+        color: gray;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .head {
+          position: relative;
+          padding: 10px;
+          color: black;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+          i {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            color: gray;
+          }
+          img {
+            width: 80px;
+            height: auto;
+          }
+        }
+        .body {
+          padding-bottom: 10px;
+          border-bottom: 1px solid lightgray;
+        }
+
+        .footer {
+          display: flex;
+          justify-content: space-between;
+          font-size: 12px;
+        }
+        &:hover {
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          img {
+            transform: rotate(5deg);
+          }
+        }
+      }
+    }
+  }
+  .statistics {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    .head {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .body {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .item {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid #eee;
+        img {
+          width: 40px;
+          height: auto;
+        }
+        p {
+          color: gray;
+        }
+        div {
+          flex-grow: 1;
+          p {
+            margin: 0;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .footer {
+      display: flex;
+      justify-content: center;
+      .btn {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 10px;
+        i {
+          margin-right: 10px;
+        }
+        &:hover {
+          i {
+            // transition: .3s;
+            animation: up-down 0.6s infinite;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .files {
+    .content {
+      flex-direction: column-reverse;
+      align-items: normal;
+    }
+  }
+}
+@keyframes up-down {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30%);
+  }
+}

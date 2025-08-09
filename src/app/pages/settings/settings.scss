@@ -1,0 +1,213 @@
+.settings {
+  background-color: aliceblue;
+  padding: 20px;
+  .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    .site-control {
+      background-color: white;
+      padding: 10px;
+      border-radius: 5px;
+      .body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .item {
+          display: flex;
+          justify-content: space-between;
+          p {
+            font-size: 0.8rem;
+            color: gray;
+          }
+        }
+        textarea {
+          border: 1px solid #ccc;
+          resize: none;
+          flex: 1;
+          min-height: 150px;
+        }
+      }
+    }
+    .general-info {
+      background-color: white;
+      border-radius: 5px;
+      padding: 10px;
+      .body {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .item {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          input[type="text"],
+          input[type="email"] {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 0.8rem;
+          }
+          .email {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            input[type="email"] {
+              flex: 1;
+              background-color: aliceblue;
+            }
+            .change {
+              color: var(--blue-color);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .security {
+      background-color: white;
+      border-radius: 5px;
+      padding: 10px;
+      .body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          p {
+            font-size: 0.8rem;
+            color: gray;
+          }
+        }
+      }
+    }
+    .media {
+      background-color: white;
+      border-radius: 5px;
+      padding: 10px;
+      .body {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .item {
+          display: flex;
+          align-items: center;
+          i,
+          input {
+            height: 40px;
+            background-color: #f6f6f6;
+            border: 1px solid #ddd;
+            padding-left: 10px;
+            border-radius: 0 6px 6px 0;
+          }
+          i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            padding: 0;
+            border-radius: 6px 0 0 6px;
+            color: gray;
+          }
+          input {
+            flex: 1;
+            border-radius: 0 6px 6px 0;
+            &:focus {
+              outline: none;
+            }
+          }
+          &:focus-within i {
+            color: black;
+          }
+        }
+      }
+    }
+    .widgets-control {
+      background-color: white;
+      border-radius: 5px;
+      padding: 10px;
+      .body {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 10px;
+        .item {
+          display: flex;
+          gap: 5px;
+          label {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .backup-manager {
+      background-color: white;
+      border-radius: 5px;
+      padding: 10px;
+      .body {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 10px;
+        .item-first {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          .item {
+            display: flex;
+            gap: 5px;
+          }
+        }
+        .item-second {
+          display: flex;
+          gap: 10px;
+          .item {
+            flex: 1;
+            label {
+              div {
+                border: 1px solid gray;
+                text-align: center;
+                padding: 10px;
+                border-radius: 6px;
+                cursor: pointer;
+              }
+            }
+            input[type="radio"] {
+              appearance: none;
+              &:checked + label {
+                color: var(--blue-color);
+                div {
+                  border-color: var(--blue-color);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.head {
+  margin-bottom: 20px;
+  h3 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  p {
+    font-size: 0.8rem;
+    color: gray;
+  }
+}
+
+@media (max-width: 768px) {
+  .backup-manager {
+    .item-second {
+      flex-direction: column;
+    }
+  }
+}

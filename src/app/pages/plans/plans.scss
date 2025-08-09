@@ -1,0 +1,97 @@
+.plans {
+  background-color: aliceblue;
+  padding: 20px;
+  .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 20px;
+    .plan {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background-color: white;
+      padding: 20px;
+      .head {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--green-color);
+        color: white;
+        font-size: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 6px solid white;
+        outline: 6px solid var(--green-color);
+      }
+      .body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .item {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          padding: 10px;
+          border-bottom: 1px solid #eee;
+          .help {
+            margin-left: auto;
+            cursor: pointer;
+            &:hover {
+              color: lighten(black, 20%);
+            }
+          }
+          .yes {
+            color: var(--green-color);
+          }
+          .no {
+            color: var(--red-color);
+          }
+        }
+      }
+      .footer {
+        display: flex;
+        justify-content: center;
+        p {
+          color: gray;
+        }
+        .btn {
+          background-color: var(--green-color);
+          color: white;
+          cursor: pointer;
+          &:hover {
+            background-color: green;
+          }
+        }
+      }
+    }
+    .basic {
+      .head {
+        background-color: var(--blue-color);
+        outline: 6px solid var(--blue-color);
+      }
+      .footer {
+        .btn {
+          background-color: var(--blue-color);
+          &:hover {
+            background-color: var(--blue-alt-color);
+          }
+        }
+      }
+    }
+    .premium {
+      .head {
+        background-color: var(--orange-color);
+        outline: 6px solid var(--orange-color);
+      }
+      .footer {
+        .btn {
+          background-color: var(--orange-color);
+          &:hover {
+            background-color: darken(orange, 10%);
+          }
+        }
+      }
+    }
+  }
+}
