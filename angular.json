@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Dashboard": {
+    "Dashboard_Elzero_Template_Four": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -62,10 +62,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Dashboard:build:production"
+              "buildTarget": "Dashboard_Elzero_Template_Four:build:production"
             },
             "development": {
-              "buildTarget": "Dashboard:build:development"
+              "buildTarget": "Dashboard_Elzero_Template_Four:build:development"
             }
           },
           "defaultConfiguration": "development"
